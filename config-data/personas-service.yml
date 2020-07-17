@@ -1,0 +1,29 @@
+server:
+  port: 8091
+  error:
+    include-message: always
+    include-binding-errors: always
+
+spring:
+
+    datasource:
+      driverClassName: com.mysql.cj.jdbc.Driver
+      url: jdbc:mysql://db-personas-nexos.cnzoekbygjzz.sa-east-1.rds.amazonaws.com:3306/db_personas
+      username: admin
+      password: K9MyRwIe0eCa5qa2cJ78
+
+    jpa:
+      show-sql: true
+      hibernate.ddl-auto: update
+      generate-ddl: true
+    logging:
+      pattern:
+        console: "%d{yyyy-MM-dd- HH:mm:ss} ${LOG_LEVEL_PATTERN:-%5p} %m%n"
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8099/eureka/
+
+
+
